@@ -1,0 +1,8 @@
+FROM ubuntu
+
+ENV TEST=HelloDocker
+
+RUN echo "SHELL: $TEST"
+
+RUN ["echo", "EXEC: $TEST"]
+RUN ["/bin/sh", "-c", "echo \"EXEC: $TEST\""]
